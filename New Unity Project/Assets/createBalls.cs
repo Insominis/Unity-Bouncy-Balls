@@ -16,7 +16,7 @@ public class createBalls : MonoBehaviour {
             var mousePos = Input.mousePosition; //gets position of mouse
             mousePos.z = 10; //10m away from the camera
             var camPos = Camera.main.ScreenToWorldPoint(mousePos); //moves main camera to position of mouse
-            GameObject bouncyBall = (GameObject)Instantiate(sphere, camPos, Quaternion.identity); //Casts sphere to GameObject.
+            Instantiate(sphere.gameObject, camPos, Quaternion.identity); //Casts sphere to GameObject.
             //Instantiates rigidbody object sphere at objectPos. Still receive cast error.
         }
     }
